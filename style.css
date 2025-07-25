@@ -1,0 +1,208 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+:root {
+  --primary-pale-blue: hsl(226, 100%, 94%);
+  --primary-bright-blue: hsl(245, 75%, 52%);
+
+  --neutral-very-pale-blue: hsl(225, 100%, 98%);
+  --neutral-desaturated-blue: hsl(224, 23%, 55%);
+  --neutral-dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  height: 100dvh;
+
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  background: var(--primary-pale-blue);
+  background-image: url("images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100%;
+}
+
+.container {
+  width: 92%;
+  max-width: 28rem;
+
+  border-radius: 1.25rem;
+  overflow: hidden;
+
+  background-color: #fff;
+
+  box-shadow: 0 40px 40px -20px rgba(13, 48, 189, 0.15);
+}
+
+header {
+  display: flex;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+main {
+  padding: 3rem;
+  text-align: center;
+}
+
+.heading {
+  color: var(--neutral-dark-blue);
+  font-size: 1.75rem;
+  font-weight: 900;
+  margin-bottom: 1.06rem;
+}
+
+.description {
+  color: var(--neutral-desaturated-blue);
+
+  font-weight: 400;
+  line-height: 1.625rem;
+
+  margin-bottom: 1.5rem;
+}
+
+.plan-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 0.6875rem;
+
+  padding: 1.5rem;
+
+  background-color: var(--neutral-very-pale-blue);
+}
+
+.plan-info {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.music-icon {
+  width: 3rem;
+  aspect-ratio: 1;
+}
+
+.plan-details h3 {
+  color: var(--neutral-dark-blue);
+  font-weight: 900;
+  margin-bottom: 0.2rem;
+}
+
+.plan-details p {
+  text-align: start;
+  color: var(--neutral-desaturated-blue);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.change-plan {
+  border: none;
+  background: none;
+
+  color: var(--primary-bright-blue);
+
+  font-size: 0.875rem;
+
+  font-weight: 800;
+
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+
+  cursor: pointer;
+
+  transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+}
+
+.change-plan:hover,
+.change-plan:focus {
+  color: #766cf1;
+  text-decoration: none;
+}
+
+.button-div {
+  width: 100%;
+  border: none;
+  background: none;
+
+  border-radius: 0.6875rem;
+
+  padding: 1rem;
+
+  font-size: 0.9375rem;
+  font-weight: 900;
+
+  cursor: pointer;
+}
+
+.proceed-payment {
+  margin-top: 2rem;
+  background: var(--primary-bright-blue);
+  color: #fff;
+  box-shadow: 0 20px 20px 0 rgba(56, 42, 225, 0.19);
+
+  transition: background-color 0.3s ease-in-out;
+}
+
+.proceed-payment:hover,
+.proceed-payment:focus {
+  background: #766cf1;
+}
+
+.cancel-order {
+  margin-top: 1rem;
+  color: var(--neutral-desaturated-blue);
+  transition: color 0.3s ease-in-out;
+}
+
+.cancel-order:hover,
+.cancel-order:focus {
+  color: var(--neutral-dark-blue);
+}
+
+@media (max-width: 500px) {
+  body {
+    background-image: url("images/pattern-background-mobile.svg");
+  }
+  main {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .plan-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 290px) {
+  .plan-info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .plan-details p {
+    text-align: center;
+  }
+}
